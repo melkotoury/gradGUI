@@ -6,10 +6,14 @@ app = Tk()
 app.title("DROVEY")
 app.geometry('720x620+200+200')
 
+iconImg = ImageTk.PhotoImage(file='img/icon.png')
+app.call('wm', 'iconphoto', app._w, iconImg)
+
 
 #Methods When Calculate Area is Clicked
 def openFileBrowse():
     x=2
+
 
 
 
