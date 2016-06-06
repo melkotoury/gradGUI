@@ -12,7 +12,9 @@ app.call('wm', 'iconphoto', app._w, iconImg)
 
 #Methods When Calculate Area is Clicked
 def openFileBrowse():
-    x=2
+    app.destroy()
+    import imageBrowse
+
 
 
 

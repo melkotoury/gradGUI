@@ -8,6 +8,10 @@ app = Tk()
 app.title("DROVEY")
 app.geometry('720x480+200+200')
 
+iconImg = ImageTk.PhotoImage(file='img/icon.png')
+app.call('wm', 'iconphoto', app._w, iconImg)
+
+
 def imageBrowse():
     app.fileName = tkFileDialog.askopenfilename(filetypes=(("PNG Extentions","*.png"),("JPG Extentions","*.jpg"),("All Files", "*.*") ))
     fo = open("imgUrl.txt", "wb")
@@ -18,9 +22,8 @@ def imageBrowse():
     tkMessageBox.showinfo("Your Image was Selected", "You Successfully selected an Image , Go on and open it!!")
     bOpenImage['state'] = 'normal'
 def imageOpen():
-    x=2
-iconImg = ImageTk.PhotoImage(file='img/icon.png')
-app.call('wm', 'iconphoto', app._w, iconImg)
+    app.destroy()
+    import use_roipoly
 
 welcomeMessage = StringVar()
 welcomeMessage.set("Please Select the Image")
